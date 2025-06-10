@@ -7,11 +7,8 @@ function Home() {
 
   return (
     <>
-      {/* ✅ Background video for Home page */}
-      <video autoPlay muted loop className="bg-video">
-        <source src="/videos/home.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* ✅ Background image for Home page */}
+      <img src="/images/home.jpg" alt="" className="bg-image" />
 
       {/* ✅ Main Content Box */}
       <div className="home-container glass-widget">
@@ -30,7 +27,7 @@ function Home() {
         {/* ✅ Call-to-Action Buttons */}
         <div className="home-buttons">
           <a
-            href="/resume/Full_Stack_Resume_Niranjan_Gurram.pdf"
+            href="/assets/Niranjan_Gurram_DE.pdf"
             className="neon-button"
             download
           >

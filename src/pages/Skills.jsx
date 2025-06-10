@@ -1,49 +1,59 @@
 import { useState } from 'react';
 import {
   FaCode, FaLaptopCode, FaDatabase, FaCogs,
-  FaServer, FaBrain, FaTools, FaRobot
+  FaServer, FaBrain, FaTools, FaRobot, FaCloud, FaChartBar
 } from 'react-icons/fa';
 
 const skills = [
   {
     icon: <FaCode />,
     title: 'Programming Languages',
-    content: 'C, C++, Python, Java, SQL, JSON'
+    content: 'Python, Java, SQL, R, JavaScript, C, C++, JSON'
   },
   {
     icon: <FaLaptopCode />,
-    title: 'Web Technologies',
-    content: 'HTML5, XML, CSS3, JavaScript, JSP, D3.js, React'
+    title: 'Web Development & Visualization',
+    content: 'HTML5, CSS3, React, D3.js, Tableau, Spotfire, JSP'
   },
   {
     icon: <FaDatabase />,
-    title: 'Databases',
-    content: 'MySQL, Neo4j'
-  },
-  {
-    icon: <FaCogs />,
-    title: 'Software Design & Architecture',
-    content: 'Agile, TDD, UML, ER Diagrams, Apache Tomcat'
+    title: 'Databases & Data Modeling',
+    content: 'MySQL, Neo4j, PostgreSQL, SQL Server, Data Warehousing, OLAP, OLTP'
   },
   {
     icon: <FaServer />,
     title: 'Big Data & Cloud',
-    content: 'Hive, Hadoop, HDFS, AWS'
+    content: 'AWS, Hadoop, Hive, Apache Spark, Airflow, ETL pipelines, HDFS'
   },
   {
     icon: <FaBrain />,
     title: 'Machine Learning & AI',
-    content: 'ML, Deep Learning, TensorFlow, PyTorch'
+    content: 'ML Algorithms, CNNs, RNNs, SVM, TensorFlow, PyTorch, Scikit-learn'
+  },
+  {
+    icon: <FaCogs />,
+    title: 'Software Design & Architecture',
+    content: 'Agile, Scrum, UML, ER Diagrams, Apache Tomcat, System Design'
   },
   {
     icon: <FaTools />,
     title: 'Tools & IDEs',
-    content: 'Eclipse, PyCharm, Visual Studio, SOAP, Git, JIRA, Excel'
+    content: 'Git, GitHub, JIRA, Eclipse, PyCharm, Visual Studio, Excel, SOAP'
   },
   {
     icon: <FaRobot />,
     title: 'Frameworks & Others',
-    content: 'Django, Flask, GitHub, ServiceNow, Embedded-C, Draw.io, Lucidchart, Ubuntu'
+    content: 'Flask, Django, Node.js, Spring Boot, ServiceNow, Draw.io, Lucidchart, Ubuntu'
+  },
+  {
+    icon: <FaCloud />,
+    title: 'DevOps & Cloud Tools',
+    content: 'CI/CD Pipelines, GitHub Actions, Jenkins, Docker, Kubernetes'
+  },
+  {
+    icon: <FaChartBar />,
+    title: 'Data Analysis & Reporting',
+    content: 'Data Visualization, Dashboard Development, Advanced Excel, Reporting Automation'
   }
 ];
 
@@ -56,26 +66,25 @@ function Skills() {
 
   return (
     <>
-      {/* Background Video */}
-      <video autoPlay muted loop className="bg-video">
-        <source src="/videos/skills.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* ✅ Background image for Skills page */}
+      <img src="/images/skills.jpg" alt="Skills Background" className="bg-image" />
 
       <div className="skills-page">
         <h2>💼 Technical Skills</h2>
         <div className="skills-grid">
           {skills.map((skill, index) => (
-            <div className="skill-card" key={index} onClick={() => toggle(index)}>
+            <div
+              className={`skill-card ${openIndex === index ? 'active' : ''}`}
+              key={index}
+              onClick={() => toggle(index)}
+            >
               <div className="skill-header">
                 {skill.icon}
                 <span>{skill.title}</span>
               </div>
-              {openIndex === index && (
-                <div className="skill-content">
-                  {skill.content}
-                </div>
-              )}
+              <div className={`skill-content ${openIndex === index ? 'visible' : ''}`}>
+                {skill.content}
+              </div>
             </div>
           ))}
         </div>

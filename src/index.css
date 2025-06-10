@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* ✅ Mobile Fix */
+@media (max-width: 768px) {
+  .home-container,
+  .login-box,
+  .glass-widget {
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .neon-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  .glow-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .sub-heading {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-group input {
+    width: 100%;
+  }
+}

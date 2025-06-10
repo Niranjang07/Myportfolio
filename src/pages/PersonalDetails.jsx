@@ -3,11 +3,8 @@ import { FaLinkedin, FaGithub, FaTwitter, FaFacebook } from 'react-icons/fa';
 function PersonalDetails() {
   return (
     <>
-      {/* ✅ Fullscreen Background video for Personal page */}
-      <video autoPlay muted loop className="bg-video">
-        <source src="/videos/personal.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* ✅ Background image for Personal page */}
+      <img src="/images/personal.jpg" alt="" className="bg-image" />
 
       <div className="personal-container">
         <h2>About Me</h2>
@@ -53,8 +50,7 @@ function PersonalDetails() {
         <h3>Connect With Me</h3>
         <div className="social-icons">
           <a href="https://linkedin.com/in/niranjangk" target="_blank" rel="noopener noreferrer"><FaLinkedin color="#0e76a8" /></a>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"><FaGithub color="#fff" /></a>
-          <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer"><FaTwitter color="#1DA1F2" /></a>
+          <a href="https://github.com/Niranjang07" target="_blank" rel="noopener noreferrer"><FaGithub color="#fff" /></a>
           <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaFacebook color="#4267B2" /></a>
         </div>
       </div>
