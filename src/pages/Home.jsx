@@ -33,12 +33,6 @@ function Home() {
           >
             📄 Download Resume
           </a>
-          <button onClick={() => window.location.href = '/skills'} className="neon-button">
-            💡 Explore Skills
-          </button>
-          <button onClick={() => window.location.href = '/projects'} className="neon-button">
-            🚀 View Projects
-          </button>
         </div>
 
         {/* ✅ Contact Section */}
