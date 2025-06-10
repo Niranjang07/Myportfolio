@@ -44,7 +44,7 @@ function Home() {
             If there’s a position or project you think I’d be a fit for, feel free to reach out!
           </p>
           <a href="mailto:niranjankumarg007@gmail.com" className="mail-link">
-            📧 niranjankumarg007@gmail.com
+            📧 niranjangurramk@gmail.com
           </a>
         </div>
       </div>
