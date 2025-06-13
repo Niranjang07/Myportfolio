@@ -17,15 +17,10 @@ function App() {
   return (
     <Router>
       <div>
-        {/* Navigation */}
+        {/* ✅ NAVIGATION */}
         <nav className="navbar">
           <div className="nav-header">
-            <button
-              className="hamburger"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              ☰
-            </button>
+            {/* 👤 Profile on the LEFT */}
             <NavLink to="/personal" className="nav-avatar">
               <img
                 src="/images/profile_pic_Niranjan.jpg"
@@ -33,8 +28,17 @@ function App() {
                 className="profile-pic"
               />
             </NavLink>
+
+            {/* 🍔 Hamburger on the RIGHT */}
+            <button
+              className="hamburger"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              ☰
+            </button>
           </div>
 
+          {/* 🔗 Navigation Links */}
           <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
             <NavLink to="/" className={getNavClass} onClick={() => setMenuOpen(false)}>Home</NavLink>
             <NavLink to="/personal" className={getNavClass} onClick={() => setMenuOpen(false)}>Personal</NavLink>
@@ -45,7 +49,7 @@ function App() {
           </div>
         </nav>
 
-        {/* Routes */}
+        {/* ✅ ROUTES */}
         <main className="container">
           <Routes>
             <Route path="/" element={<Home />} />

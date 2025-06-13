@@ -1397,3 +1397,91 @@ main {
   border-color: rgba(0, 255, 255, 0.4);
   font-weight: 600;
 }
+/* === NAV HEADER: PROFILE LEFT, HAMBURGER RIGHT === */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  background-color: #111;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* Hamburger */
+.hamburger {
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #1a1a1a;
+}
+
+.nav-links.open {
+  display: flex;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-bottom: 1px solid #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background: #00ffff22;
+  color: #00ffff;
+}
+
+/* Highlight active link */
+.active-link {
+  background-color: #00ffff22;
+  color: #00ffff;
+}
+
+/* DESKTOP VIEW */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    width: auto;
+  }
+
+  .nav-links a {
+    border: none;
+    padding: 10px 15px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
