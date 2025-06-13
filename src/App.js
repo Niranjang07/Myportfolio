@@ -11,36 +11,37 @@ import './App.css';
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const getNavClass = ({ isActive }) =>
+    isActive ? 'active-link' : undefined;
+
   return (
     <Router>
       <div>
         {/* Navigation */}
         <nav className="navbar">
-          <div className="nav-left">
+          <div className="nav-header">
             <button
               className="hamburger"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               ☰
             </button>
-            <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-              <NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
-              <NavLink to="/personal" onClick={() => setMenuOpen(false)}>Personal</NavLink>
-              <NavLink to="/education" onClick={() => setMenuOpen(false)}>Education</NavLink>
-              <NavLink to="/experience" onClick={() => setMenuOpen(false)}>Experience</NavLink>
-              <NavLink to="/skills" onClick={() => setMenuOpen(false)}>Skills</NavLink>
-              <NavLink to="/projects" onClick={() => setMenuOpen(false)}>Projects</NavLink>
-            </div>
-          </div>
-
-          <div className="nav-right">
-            <NavLink to="/personal">
+            <NavLink to="/personal" className="nav-avatar">
               <img
                 src="/images/profile_pic_Niranjan.jpg"
                 alt="Niranjan"
                 className="profile-pic"
               />
             </NavLink>
+          </div>
+
+          <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+            <NavLink to="/" className={getNavClass} onClick={() => setMenuOpen(false)}>Home</NavLink>
+            <NavLink to="/personal" className={getNavClass} onClick={() => setMenuOpen(false)}>Personal</NavLink>
+            <NavLink to="/education" className={getNavClass} onClick={() => setMenuOpen(false)}>Education</NavLink>
+            <NavLink to="/experience" className={getNavClass} onClick={() => setMenuOpen(false)}>Experience</NavLink>
+            <NavLink to="/skills" className={getNavClass} onClick={() => setMenuOpen(false)}>Skills</NavLink>
+            <NavLink to="/projects" className={getNavClass} onClick={() => setMenuOpen(false)}>Projects</NavLink>
           </div>
         </nav>
 
