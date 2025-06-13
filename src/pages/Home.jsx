@@ -16,7 +16,7 @@ function Home() {
         <h3 className="sub-heading">Full-Stack Developer | Software Engineer | CS Graduate</h3>
 
         <p className="home-text">
-          I’m a Computer Science graduate with 2+ years of experience designing and deploying scalable web applications.
+          I’m a Computer Science graduate with 3+ years of experience designing and deploying scalable web applications.
           Passionate about modern UI, backend systems, and cloud-native apps, I transform ideas into polished digital solutions.
         </p>
 

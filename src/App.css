@@ -81,26 +81,41 @@ html, body {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
+  padding-right: 1rem;
 }
 
 .nav-profile {
   position: relative;
 }
+.profile-pic:hover {
+  box-shadow: 0 0 12px #00ffff;
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
 
 /* Profile Picture */
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid white;
-  box-shadow: 0 0 28px rgba(0,0,0,0.13);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   background: #181825;
   display: block;
-  position: absolute;
-  top: 1cm;
-  right: 1cm;
+}
+
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    position: static;
+    margin: 1rem auto 0;
+    display: block;
+  }
 }
 
 /* === NAV-ACCESS DROPDOWN === */
@@ -163,12 +178,10 @@ html, body {
 
 /* === MAIN LAYOUT === */
 main {
-  width: 100vw;
-  padding: 2rem;
-  min-height: 80vh;
-  position: relative;
-  z-index: 1;
-  border-radius: 0;
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 /* === PAGE CONTAINERS === */
@@ -863,14 +876,10 @@ main {
 
 /* === HOME GLASS CENTER === */
 .home-container.glass-widget {
-  position: absolute;
-  left: 50%;
-  top: 54%;
-  transform: translate(-50%, -50%);
-  width: 96vw;
-  max-width: 720px;
-  min-width: 335px;
-  min-height: 480px;
+  position: relative;
+  margin-top: 4rem;
+  width: 96%;
+  max-width: 800px;
   background: rgba(28, 32, 39, 0.83);
   border-radius: 22px;
   box-shadow: 0 6px 36px #15181f77, 0 2px 8px #1a202a55;
@@ -1231,5 +1240,73 @@ main {
   .suggestion-box {
     padding: 1rem;
     font-size: 0.95rem;
+  }
+}
+/* App.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  background-color: #111;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  font-size: 26px;
+  color: white;
+  background: none;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-right .profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .nav-right {
+    display: none;
   }
 }

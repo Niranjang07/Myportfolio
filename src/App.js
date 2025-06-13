@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import Home from './pages/Home';
 import PersonalDetails from './pages/PersonalDetails';
@@ -8,18 +9,28 @@ import Projects from './pages/Projects';
 import './App.css';
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <Router>
       <div>
         {/* Navigation */}
         <nav className="navbar">
           <div className="nav-left">
-            <NavLink to="/" className={({ isActive }) => isActive ? 'active-link' : ''}>Home</NavLink>
-            <NavLink to="/personal" className={({ isActive }) => isActive ? 'active-link' : ''}>Personal</NavLink>
-            <NavLink to="/education" className={({ isActive }) => isActive ? 'active-link' : ''}>Education</NavLink>
-            <NavLink to="/experience" className={({ isActive }) => isActive ? 'active-link' : ''}>Experience</NavLink>
-            <NavLink to="/skills" className={({ isActive }) => isActive ? 'active-link' : ''}>Skills</NavLink>
-            <NavLink to="/projects" className={({ isActive }) => isActive ? 'active-link' : ''}>Projects</NavLink>
+            <button
+              className="hamburger"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              ☰
+            </button>
+            <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+              <NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
+              <NavLink to="/personal" onClick={() => setMenuOpen(false)}>Personal</NavLink>
+              <NavLink to="/education" onClick={() => setMenuOpen(false)}>Education</NavLink>
+              <NavLink to="/experience" onClick={() => setMenuOpen(false)}>Experience</NavLink>
+              <NavLink to="/skills" onClick={() => setMenuOpen(false)}>Skills</NavLink>
+              <NavLink to="/projects" onClick={() => setMenuOpen(false)}>Projects</NavLink>
+            </div>
           </div>
           <div className="nav-right">
             <NavLink to="/personal">
