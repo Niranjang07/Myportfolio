@@ -32,6 +32,7 @@ function App() {
               <NavLink to="/projects" onClick={() => setMenuOpen(false)}>Projects</NavLink>
             </div>
           </div>
+
           <div className="nav-right">
             <NavLink to="/personal">
               <img
@@ -44,7 +45,7 @@ function App() {
         </nav>
 
         {/* Routes */}
-        <main>
+        <main className="container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/personal" element={<PersonalDetails />} />

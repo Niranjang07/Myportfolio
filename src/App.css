@@ -1310,3 +1310,60 @@ main {
     display: none;
   }
 }
+/* === MAIN CONTENT WRAPPER === */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+/* === TEXT STYLES === */
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* === RESPONSIVE FOR MOBILE === */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .container h1 {
+    font-size: 1.4rem;
+  }
+
+  .container p {
+    font-size: 1rem;
+  }
+}
+/* Main container wrapping the routed components */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;             /* Centers content */
+  padding: 2rem 1rem;         /* Top-bottom and left-right spacing */
+  box-sizing: border-box;
+  min-height: calc(100vh - 80px);  /* Ensures full height minus navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Responsive tweaks for smaller devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.02); /* or transparent */
+  border-radius: 12px;
+}
