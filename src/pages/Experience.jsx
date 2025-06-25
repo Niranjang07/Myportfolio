@@ -23,7 +23,7 @@ function Experience() {
 
         <div className="experience-item">
           <h3><FaBriefcase /> Data Engineer</h3>
-          <p><FaBuilding /> <strong>Tech Mahindra (Pipelines & Enablement)</strong>, Hyderabad, India</p>
+          <p><FaBuilding /> <strong> Datapro Information  Technology Pvt Ltd (Pipelines & Enablement)</strong>, Hyderabad, India</p>
           <p><FaClock /> April 2022 – August 2023</p>
           <ul>
             <li><FaTasks /> Designed and developed automated ETL pipelines using Apache Airflow and ETL tools to centralize telecom data.</li>
