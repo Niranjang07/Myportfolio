@@ -49,7 +49,7 @@ function PersonalDetails() {
 
         <h3>Connect With Me</h3>
         <div className="social-icons">
-          <a href="https://linkedin.com/in/niranjangk" target="_blank" rel="noopener noreferrer"><FaLinkedin color="#0e76a8" /></a>
+          <a href="https://linkedin.com/in/niranjang07" target="_blank" rel="noopener noreferrer"><FaLinkedin color="#0e76a8" /></a>
           <a href="https://github.com/Niranjang07" target="_blank" rel="noopener noreferrer"><FaGithub color="#fff" /></a>
           <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaFacebook color="#4267B2" /></a>
         </div>
