@@ -27,9 +27,11 @@ function Home() {
         {/* ✅ Call-to-Action Buttons */}
         <div className="home-buttons">
           <a
-            href="/assets/Niranjan_Gurram_DE.pdf"
+            href="/assets/Niranjan_G_DE.pdf"
             className="neon-button"
-            download
+            download="Niranjan_G_DE.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             📄 Download Resume
           </a>
@@ -43,8 +45,8 @@ function Home() {
             <br />
             If there’s a position or project you think I’d be a fit for, feel free to reach out!
           </p>
-          <a href="mailto:niranjankumarg007@gmail.com" className="mail-link">
-            📧 niranjangurramk@gmail.com
+          <a href="mailto:niranjankgurram@gmail.com" className="mail-link">
+            📧 niranjankgurram@gmail.com
           </a>
         </div>
       </div>
