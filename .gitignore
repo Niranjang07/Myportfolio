@@ -1,0 +1,10 @@
+node_modules/
+.cache/
+**/.eslintcache
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+.vscode/
+.env*
+build/
+dist/

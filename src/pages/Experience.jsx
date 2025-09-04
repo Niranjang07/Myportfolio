@@ -1,62 +1,60 @@
-import { FaBriefcase, FaBuilding, FaClock, FaTasks } from 'react-icons/fa';
+import { FaBriefcase, FaBuilding, FaClock, FaTasks, FaMapMarkerAlt } from 'react-icons/fa';
 
 function Experience() {
   return (
     <>
-      {/* ✅ Background image */}
-      <img src="/images/experinece.jpg" alt="" className="bg-image" />
+      {/* ✅ Background image (fixed filename) */}
+      <img src="/images/experience.jpg" alt="" className="bg-image" />
 
       <div className="experience-container">
         <h2><FaBriefcase /> Professional Experience</h2>
 
+        {/* ===== Capital One ===== */}
         <div className="experience-item">
-          <h3><FaBriefcase /> Data Engineer</h3>
-          <p><FaBuilding /> <strong>Datapro Information  Technology Pvt Ltd (Marketing Product & OPS)</strong>,  India</p>
-          <p><FaClock /> May 2021 – February 2022</p>
+          <h3><FaBriefcase /> Graduate Data Engineer Intern</h3>
+          <p>
+            <FaBuilding /> <strong>Capital One</strong>
+            {' '}<FaMapMarkerAlt /> USA
+          </p>
+          <p><FaClock /> Feb 2024 – Jun 2025</p>
           <ul>
-            <li><FaTasks /> Improved dashboard performance by 30% by optimizing and maintaining analytics dashboards.</li>
-            <li><FaTasks /> Accelerated stakeholder data access by 25% through automation and advanced visualizations using SQL, Python, and Tableau.</li>
-            <li><FaTasks /> Increased data accuracy by 20% via rigorous validation and analytical reviews supporting strategic decisions.</li>
-            <li><FaTasks /> Enhanced team productivity by 35% by adopting Git and GitHub best practices for version control and collaboration.</li>
+            <li><FaTasks /> Orchestrated a <strong>38-module Terraform</strong> stack across AWS/Azure/GCP with drift checks, cutting IaC tickets <strong>45%</strong> and saving <strong>$260K</strong>.</li>
+            <li><FaTasks /> Built <strong>Kafka–Debezium CDC</strong> streaming to Snowflake handling <strong>11K TPS</strong> with sub-second SLAs for real-time fraud analytics.</li>
+            <li><FaTasks /> Productionized a <strong>PyTorch fraud model</strong> (AUC <strong>0.94</strong>), reducing false positives <strong>27%</strong>; feature store + drift alerts cut triage <strong>60%</strong>.</li>
+            <li><FaTasks /> Implemented <strong>Helm</strong> and <strong>ArgoCD GitOps</strong>; blue-green rollbacks ~<strong>3 min</strong>, lowering MTTR from <strong>22 → 12 min</strong>.</li>
+            <li><FaTasks /> Deployed <strong>Prometheus/Grafana SLO</strong> dashboards; alerts reduced incident MTTR <strong>38 → 22 min</strong> and avoided <strong>$80K</strong> in penalties.</li>
+            <li><FaTasks /> Managed a <strong>220-item backlog</strong>; sprint velocity +<strong>18%</strong>, on-time releases lifted NPS <strong>54 → 72</strong>. Mentored 4 juniors (onboarding <strong>9 → 5 weeks</strong>).</li>
           </ul>
         </div>
 
+        {/* ===== TCS ===== */}
         <div className="experience-item">
-          <h3><FaBriefcase /> Data Engineer</h3>
-          <p><FaBuilding /> <strong> Datapro Information  Technology Pvt Ltd (Pipelines & Enablement)</strong>, India</p>
-          <p><FaClock /> April 2022 – August 2023</p>
+          <h3><FaBriefcase /> Data Engineering Co-op</h3>
+          <p>
+            <FaBuilding /> <strong>Tata Consultancy Services</strong>
+            {' '}<FaMapMarkerAlt /> India
+          </p>
+          <p><FaClock /> Jul 2021 – Aug 2023</p>
           <ul>
-            <li><FaTasks /> Designed and developed automated ETL pipelines using Apache Airflow and ETL tools to centralize telecom data.</li>
-            <li><FaTasks /> Built and optimized Spark/Python workflows for real-time processing of call detail records and usage metrics.</li>
-            <li><FaTasks /> Engineered SQL scripts (DDL/DML) for schema evolution and OLTP-OLAP data synchronization.</li>
-            <li><FaTasks /> Created custom Airflow DAGs with parameterized configurations to manage data refresh frequency, increasing pipeline flexibility and
-maintainability across multiple environments.</li>
-            <li><FaTasks /> Collaborated with telecom SMEs to support use cases like churn prediction, usage trends, and performance reporting.</li>
+            <li><FaTasks /> Built a <strong>20-node Spark</strong> cluster processing <strong>2 TB/day</strong>; analyst wait time fell <strong>55%</strong> (≈<strong>360 hrs/yr</strong> saved).</li>
+            <li><FaTasks /> Tuned Spark partitions & Z-order; shuffle spill −<strong>47%</strong>, KPI refresh time halved, saving <strong>$110K</strong> compute.</li>
+            <li><FaTasks /> Authored <strong>17 Airflow DAGs</strong> with Slack/PagerDuty; MTTR <strong>120 → 38 min</strong>, SLA breaches <strong>20% → 2%</strong>.</li>
+            <li><FaTasks /> Automated KPI pipelines with <strong>Python/SQL</strong> and <strong>dbt</strong>; SLA compliance <strong>80% → 98%</strong> (unlocked 14 hrs/month).</li>
+            <li><FaTasks /> Refactored Tableau to extracts; load <strong>18 → 12 s</strong> and adoption +<strong>32%</strong>, influencing <strong>$4.7M</strong> retention decisions.</li>
+            <li><FaTasks /> Rolled out <strong>Azure Purview</strong>: 86 RBAC, 210 masked columns, lineage jobs—passed <strong>2 GDPR audits</strong> with zero issues.</li>
+            <li><FaTasks /> Embedded <strong>Great Expectations</strong> (85% coverage) + JMeter gates; defect density −<strong>42%</strong>, avoided <strong>6</strong> hotfixes.</li>
           </ul>
         </div>
 
-        <div className="experience-item">
-          <h3><FaBriefcase /> Software Engineer</h3>
-          <p><FaBuilding /> <strong>Tech Mahindra</strong>, India (Remote)</p>
-          <p><FaClock /> May 2024 – September 2024</p>
-          <ul>
-            <li><FaTasks /> Improved front-end performance by 20% by building and optimizing web apps using React.js and JavaScript.</li>
-            <li><FaTasks /> Reduced API response time by 15% by deploying optimized RESTful APIs with Node.js and Express.</li>
-            <li><FaTasks /> Enhanced database performance by 25% via schema optimization using MySQL and PostgreSQL.</li>
-            <li><FaTasks /> Enabled automated Azure resource management through Terraform and DevOps collaboration.</li>
-            <li><FaTasks /> Reduced release cycles by 25% with CI/CD pipelines via Jenkins and GitHub Actions.</li>
-            <li><FaTasks /> Cut data retrieval time by 20% through NoSQL database adoption, including MongoDB and Azure Cosmos DB.</li>
-          </ul>
-        </div>
-
+        {/* (Optional) Keep these if you still want them visible on site */}
+        {/* 
         <div className="experience-item">
           <h3><FaBriefcase /> Teaching Fellow</h3>
           <p><FaBuilding /> University of Texas at Arlington, USA</p>
           <p><FaClock /> Jan 2025 – May 2025</p>
           <ul>
-            <li><FaTasks /> Taught Machine Learning and AI including CNNs, RNNs, and SVMs.</li>
-            <li><FaTasks /> Mentored students on Python, TensorFlow, and Scikit-learn.</li>
-            <li><FaTasks /> Conducted data visualization workshops utilizing Pandas and Matplotlib.</li>
+            <li><FaTasks /> Taught Machine Learning/Deep Learning; mentored projects with Python, TensorFlow, Scikit-learn.</li>
+            <li><FaTasks /> Led visualization workshops using Pandas and Matplotlib.</li>
           </ul>
         </div>
 
@@ -65,11 +63,10 @@ maintainability across multiple environments.</li>
           <p><FaBuilding /> University of Texas at Arlington, USA</p>
           <p><FaClock /> Aug 2023 – May 2024</p>
           <ul>
-            <li><FaTasks /> Managed 30+ computer systems with Unix shell scripting.</li>
-            <li><FaTasks /> Led comprehensive lab setup and safety audits.</li>
-            <li><FaTasks /> Improved overall system uptime by approximately 25%.</li>
+            <li><FaTasks /> Managed 30+ lab systems with shell scripting; improved uptime by ~25%.</li>
           </ul>
         </div>
+        */}
       </div>
     </>
   );
