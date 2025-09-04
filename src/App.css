@@ -1692,3 +1692,71 @@ html, body {
   z-index: -1;
   filter: blur(4px) brightness(0.5);
 }
+/* 1) Make padding count inside widths (prevents 92% + padding > 100%) */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* 2) Stop horizontal scrolling/cut-offs on mobile */
+html, body { overflow-x: hidden; }
+
+/* 3) Never use 100vw for layout bars on mobile – it causes overflow with scrollbars */
+.navbar, header, footer { width: 100%; max-width: 100%; }
+
+/* 4) Cards/sections: keep within viewport, center, and be responsive */
+.home-container,
+.experience-container,
+.skills-container,
+.projects-container,
+.personal-container {
+  width: 100%;
+  max-width: 720px;          /* adjust to taste */
+  margin: 88px auto 32px;    /* center the card */
+  padding: 20px;
+  border-radius: 16px;
+}
+
+/* If you use a shared "glass-widget" wrapper, enforce safe sizing there too */
+.glass-widget {
+  width: 100%;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 5) Background image should not create overflow */
+.bg-image {
+  position: fixed;
+  inset: 0;                  /* top/right/bottom/left = 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(3px) brightness(0.55);
+}
+
+/* 6) Tighter mobile layout */
+@media (max-width: 640px) {
+  .home-container,
+  .experience-container,
+  .skills-container,
+  .projects-container,
+  .personal-container,
+  .glass-widget {
+    max-width: 94%;
+    margin: 76px auto 24px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  /* Prevent long words/links from pushing width */
+  .home-container,
+  .experience-container,
+  .skills-container,
+  .projects-container,
+  .personal-container {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+/* 7) If any element still spills, this catches it without clipping the card */
+img, video, canvas, svg { max-width: 100%; height: auto; display: block; }
