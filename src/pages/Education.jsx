@@ -27,7 +27,7 @@ function Education() {
         <div className="education-item">
           <h3><FaUniversity /> Bachelor of Technology (B.Tech) in Computer Science</h3>
           <p><strong>University:</strong> Vignan’s University, Andhra Pradesh, India</p>
-          <p><strong>Graduation:</strong> May 2023</p>
+
           <p><FaBookOpen /> <strong>Relevant Coursework & Projects:</strong></p>
           <ul>
             <li>Cryptography and Network Security implementation projects</li>
