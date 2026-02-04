@@ -26,7 +26,7 @@ function Experience() {
 
         <div className="experience-item">
           <h3><FaBriefcase /> Software Engineer </h3>
-          <p><FaBuilding /> <strong>Stirtoni Software Pvt Ltd. </strong>, INDIA </p>
+          <p><FaBuilding /> <strong>SAAKHIL Technologies Pvt Ltd. </strong>, INDIA </p>
           <p><FaClock /> June 2016 – June 2019</p>
           <ul>
             <li><FaTasks /> Designed and developed scalable ETL pipelines using Java and Python within the Apache Spark and Hadoop ecosystem, processing high-volume telecom CDR and network event data.</li>

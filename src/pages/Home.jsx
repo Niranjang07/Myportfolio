@@ -16,7 +16,7 @@ function Home() {
         <h3 className="sub-heading">Full-Stack Developer | Software Engineer | CS Graduate</h3>
 
         <p className="home-text">
-          I’m a Software Engineer with 7+ years of experience building scalable cloud‑native applications, data pipelines, and full‑stack systems.
+          I’m a Software Engineer with 3+ years of experience building scalable cloud‑native applications, data pipelines, and full‑stack systems.
           Passionate about modern UI, backend engineering, and distributed data processing, I turn complex ideas into clean, reliable, and impactful digital solutions.
         </p>
 

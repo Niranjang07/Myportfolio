@@ -9,7 +9,7 @@ function PersonalDetails() {
       <div className="personal-container">
         <h2>About Me</h2>
         <p>
-          I am an experienced Computer Science graduate with over 7 years of IT experience in designing,
+          I am an experienced Computer Science graduate with over 3+ years of IT experience in designing,
           implementing, and supporting interactive web applications. I hold a <strong>B.Tech in Computer Science</strong> from
           <em> Vignan’s University</em>, Andhra Pradesh, and  <strong>Master's in CS</strong> at
           <em> University of Texas at Arlington</em>, USA.
