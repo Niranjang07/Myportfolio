@@ -16,8 +16,8 @@ function Home() {
         <h3 className="sub-heading">Full-Stack Developer | Software Engineer | CS Graduate</h3>
 
         <p className="home-text">
-          I’m a Computer Science graduate with 3+ years of experience designing and deploying scalable web applications.
-          Passionate about modern UI, backend systems, and cloud-native apps, I transform ideas into polished digital solutions.
+          I’m a Software Engineer with 7+ years of experience building scalable cloud‑native applications, data pipelines, and full‑stack systems.
+          Passionate about modern UI, backend engineering, and distributed data processing, I turn complex ideas into clean, reliable, and impactful digital solutions.
         </p>
 
         <p className="home-text">
@@ -41,7 +41,7 @@ function Home() {
         <div className="suggestion-box">
           <h3>🤝 Let's Connect</h3>
           <p>
-            Have feedback, opportunities, or collaboration ideas? I’m open to new challenges and exciting teams. 
+            Have feedback, opportunities, or collaboration ideas? I’m open to new challenges and exciting teams.
             <br />
             If there’s a position or project you think I’d be a fit for, feel free to reach out!
           </p>
